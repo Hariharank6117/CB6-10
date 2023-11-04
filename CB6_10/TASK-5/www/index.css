@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 95%; /* Improved maximum width */
+    width: 100%;
+    text-align: center;
+    animation: slide-up 0.5s ease-in-out;
+    transform-origin: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+/* Increase the size of placeholder text */
+::placeholder {
+    font-size: 16px;
+}
+
+/* Increase the size of the placeholder text in the select element */
+#userRole::placeholder {
+    font-size: 14px;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input, button, select {
+    margin: 10px auto;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Larger border radius for a smoother look */
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 18px; /* Increased font size for better readability */
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Slightly reduced box shadow for a subtle effect */
+}
+
+label {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+input:focus ~ label {
+    transform: translateY(-10px);
+    color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px; /* Larger font size for buttons */
+    border-radius: 10px; /* Consistent border radius with other elements */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px; /* Increased padding for better visibility */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.show {
+    display: block;
+    animation: fade 3s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 98%; /* Increased width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width for the smallest screens */
+    }
+    input, button, select {
+        padding: 12px;
+        font-size: 16px; /* Adjusted font size for very small screens */
+    }
+}

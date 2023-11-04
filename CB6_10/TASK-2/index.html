@@ -1,0 +1,61 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>ADMIN PAGE</title>
+</head>
+<body>
+    <div class="container">
+                <div class="card">
+            <h1>ADMIN PAGE</h1>
+            <div id="recaptcha-container"></div>
+            <label for="userRole"><h2>Select your District:</h2></label>
+            <select id="userRole" name="userRole" onchange="updatePhoneNumber()">
+                <option value="Chennai"><h2>Chennai</h2></option>
+                <option value="Kancheepuram"><h2>Kancheepuram</h2></option>
+                <option value="Tiruvallur"><h2>Tiruvallur</h2></option>
+                <option value="Chengalpattu"><h2>Chengalpattu</h2></option>
+                <option value="Vellore"><h2>Vellore</h2></option>
+                <option value="Ranipet"><h2>Ranipet</h2></option>
+                <option value="Tirupattur"><h2>Tirupattur</h2></option>
+                <option value="Krishnagiri"><h2>Krishnagiri</h2></option>
+                <option value="Salem"><h2>Salem</h2></option>
+                <option value="Namakkal"><h2>Namakkal</h2></option>
+                <option value="Dharmapuri"><h2>Dharmapuri</h2></option>
+                <option value="Erode"><h2>Erode</h2></option>
+                <option value="Coimbatore"><h2>Coimbatore</h2></option>
+                <option value="Tiruppur"><h2>Tiruppur</h2></option>
+                <option value="Nilgiris (Udhagamandalam)"><h2>Nilgiris (Udhagamandalam)</h2></option>
+                <option value="Tiruchirappalli (Trichy)"><h2>Tiruchirappalli (Trichy)</h2></option>
+                <option value="Karur"><h2>Karur</h2></option>
+                <option value="Perambalur"><h2>Perambalur</h2></option>
+                <option value="Pudukkottai"><h2>Pudukkottai</h2></option>
+                <option value="Thanjavur"><h2>Thanjavur</h2></option>
+                <option value="Nagapattinam"><h2>Nagapattinam</h2></option>
+                <option value="Tiruvarur"><h2>Tiruvarur</h2></option>
+                <option value="Mayiladuthurai"><h2>Mayiladuthurai</h2></option>
+                <option value="Ariyalur"><h2>Ariyalur</h2></option>
+                <option value="Cuddalore"><h2>Cuddalore</h2></option>
+                <option value="Villupuram"><h2>Villupuram</h2></option>
+                <option value="Kallakurichi"><h2>Kallakurichi</h2></option>
+                <option value="Tiruvannamalai"><h2>Tiruvannamalai</h2></option>
+                <option value="Viluppuram"><h2>Viluppuram</h2></option>
+                <option value="Ramanathapuram"><h2>Ramanathapuram</h2></option>
+                <option value="Sivaganga"><h2>Sivaganga</h2></option>
+                <option value="Madurai"><h2>Madurai</h2></option>
+            <input type="tel" id="phone" placeholder="Enter your phone number" readonly>
+            <button onclick="sendOTP()"><h1>Send OTP</h1></button>
+            <input type="text" id="verificationCode" placeholder="Enter OTP">
+            <button onclick="verifyOTP()"><h1>Verify OTP</h1></button>
+        </div>
+    </div>
+
+
+    <div id="otpSentNotification" class="notification"></div>
+    <div id="verificationSuccessNotification" class="notification"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

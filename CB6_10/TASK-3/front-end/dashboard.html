@@ -1,0 +1,52 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <title>Message Updating</title>
+</head>
+<body>
+    <h1>Message Updating</h1>
+    <div class="container">
+        <!-- Additional Input Fields -->
+        <div>
+            <label for="new-task">Restion Shop Open and Closing Time:</label>
+            <input type="text" id="open-time" placeholder="e.g., 9:00 AM - 6:00 PM">
+        </div>
+
+        <div>
+            <label for="working-time">Working Time and Rest Time:</label>
+            <input type="text" id="working-time" placeholder="e.g., 8 hours work, 1-hour rest">
+        </div>
+
+        <div>
+            <label for="product-delivery">Product Delivery Today:</label>
+            <select id="product-delivery">
+                <option value="oil">Oil</option>
+                <option value="rice">Rice</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div>
+            <label for="shop-address">Restion Shop Place and Address:</label>
+            <input type="text" id="shop-address" placeholder="Enter address">
+        </div>
+
+        <div>
+            <label for="important-message">Important Messages:</label>
+            <textarea id="important-message" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+
+        <button id="submit-task">Submit Task</button>
+    </div>
+
+    <div class="container">
+        <h2>All List</h2>
+        <div id="task-list">
+            <!-- Tasks will be displayed here -->
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
